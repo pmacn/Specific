@@ -42,7 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AndSpecification.cs" />
+    <Compile Include="ISpecification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpecificationExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
