@@ -17,5 +17,10 @@ namespace Specific
         {
             return new OrSpecification<T>(left, right);
         }
+
+        public static ISpecification<T> Xor<T>(this ISpecification<T> left, ISpecification<T> right)
+        {
+            return new XorSpecification<T>(left, right);
+        }
     }
 }

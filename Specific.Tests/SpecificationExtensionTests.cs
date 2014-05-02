@@ -103,5 +103,52 @@ namespace Specific.Tests
                 specification.SatisfiedBy(null).ShouldBe(false);
             }
         }
+
+        public class XorCombinator
+        {
+            [Fact]
+            public void TrueXorTrue_IsFalse()
+            {
+                var left = FakeSpecification.AlwaysTrue;
+                var right = FakeSpecification.AlwaysTrue;
+
+                var specification = left.Xor(right);
+
+                specification.SatisfiedBy(null).ShouldBe(false);
+            }
+
+            [Fact]
+            public void TrueOrElseFalse_IsTrue()
+            {
+                var left = FakeSpecification.AlwaysTrue;
+                var right = FakeSpecification.AlwaysFalse;
+
+                var specification = left.Xor(right);
+
+                specification.SatisfiedBy(null).ShouldBe(true);
+            }
+
+            [Fact]
+            public void FalseOrElseTrue_IsTrue()
+            {
+                var left = FakeSpecification.AlwaysFalse;
+                var right = FakeSpecification.AlwaysTrue;
+
+                var specification = left.Xor(right);
+
+                specification.SatisfiedBy(null).ShouldBe(true);
+            }
+
+            [Fact]
+            public void FalseOrElseFalse_IsTrue()
+            {
+                var left = FakeSpecification.AlwaysFalse;
+                var right = FakeSpecification.AlwaysFalse;
+
+                var specification = left.Xor(right);
+
+                specification.SatisfiedBy(null).ShouldBe(false);
+            }
+        }
     }
 }
