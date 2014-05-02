@@ -56,5 +56,52 @@ namespace Specific.Tests
                 specification.SatisfiedBy(null).ShouldBe(false);
             }
         }
+
+        public class OrCombinator
+        {
+            [Fact]
+            public void TrueOrTrue_IsTrue()
+            {
+                var left = FakeSpecification.AlwaysTrue;
+                var right = FakeSpecification.AlwaysTrue;
+
+                var specification = left.Or(right);
+
+                specification.SatisfiedBy(null).ShouldBe(true);
+            }
+
+            [Fact]
+            public void TrueOrFalse_IsTrue()
+            {
+                var left = FakeSpecification.AlwaysTrue;
+                var right = FakeSpecification.AlwaysFalse;
+
+                var specification = left.Or(right);
+
+                specification.SatisfiedBy(null).ShouldBe(true);
+            }
+
+            [Fact]
+            public void FalseOrTrue_IsTrue()
+            {
+                var left = FakeSpecification.AlwaysFalse;
+                var right = FakeSpecification.AlwaysTrue;
+
+                var specification = left.Or(right);
+
+                specification.SatisfiedBy(null).ShouldBe(true);
+            }
+
+            [Fact]
+            public void FalseOrFalse_IsFalse()
+            {
+                var left = FakeSpecification.AlwaysFalse;
+                var right = FakeSpecification.AlwaysFalse;
+
+                var specification = left.Or(right);
+
+                specification.SatisfiedBy(null).ShouldBe(false);
+            }
+        }
     }
 }
