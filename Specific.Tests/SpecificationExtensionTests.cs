@@ -55,6 +55,15 @@ namespace Specific.Tests
 
                 specification.SatisfiedBy(null).ShouldBe(false);
             }
+
+            [Fact]
+            public void WhenNullConstructorArgument_ThrowsException()
+            {
+                ISpecification<object> nullSpec = null;
+                ISpecification<object> notNullSpec = FakeSpecification.AlwaysTrue;
+                Should.Throw<ArgumentNullException>(() => new AndSpecification<object>(nullSpec, notNullSpec));
+                Should.Throw<ArgumentNullException>(() => new AndSpecification<object>(notNullSpec, nullSpec));
+            }
         }
 
         public class OrCombinator
@@ -102,6 +111,15 @@ namespace Specific.Tests
 
                 specification.SatisfiedBy(null).ShouldBe(false);
             }
+
+            [Fact]
+            public void WhenNullConstructorArgument_ThrowsException()
+            {
+                ISpecification<object> nullSpec = null;
+                ISpecification<object> notNullSpec = FakeSpecification.AlwaysTrue;
+                Should.Throw<ArgumentNullException>(() => new OrSpecification<object>(nullSpec, notNullSpec));
+                Should.Throw<ArgumentNullException>(() => new OrSpecification<object>(notNullSpec, nullSpec));
+            }
         }
 
         public class XorCombinator
@@ -148,6 +166,15 @@ namespace Specific.Tests
                 var specification = left.Xor(right);
 
                 specification.SatisfiedBy(null).ShouldBe(false);
+            }
+
+            [Fact]
+            public void WhenNullConstructorArgument_ThrowsException()
+            {
+                ISpecification<object> nullSpec = null;
+                ISpecification<object> notNullSpec = FakeSpecification.AlwaysTrue;
+                Should.Throw<ArgumentNullException>(() => new XorSpecification<object>(nullSpec, notNullSpec));
+                Should.Throw<ArgumentNullException>(() => new XorSpecification<object>(notNullSpec, nullSpec));
             }
         }
     }
