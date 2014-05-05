@@ -45,7 +45,7 @@ namespace Specific.Tests
     public class IEnumerableExtensionTests
     {
         [Fact]
-        public void Meh()
+        public void CanFilterIEnumerableUsingSpecification()
         {
             var specialOnes = Enumerable.Range(1, 100).Where(new IsSpecialNumber());
             specialOnes.Count().ShouldBe(4);
