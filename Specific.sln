@@ -1,11 +1,16 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specific", "Specific\Specific.csproj", "{801B8E1A-C124-4A69-A45B-F2DFC6931B10}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specific", "src\Specific\Specific.csproj", "{801B8E1A-C124-4A69-A45B-F2DFC6931B10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specific.Tests", "Specific.Tests\Specific.Tests.csproj", "{C4C93363-60E2-45D0-B956-6AC35424D2C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specific.Tests", "src\Specific.Tests\Specific.Tests.csproj", "{C4C93363-60E2-45D0-B956-6AC35424D2C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Git", "Git", "{57441D9A-5F92-4DB0-B008-D5CAB5035333}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
