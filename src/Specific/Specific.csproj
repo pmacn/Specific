@@ -30,8 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Krav.Simple">
-      <HintPath>..\packages\Krav.Simple.0.1.1\lib\portable-net4+sl5+wp8+windows8\Krav.Simple.dll</HintPath>
+    <Reference Include="Krav.Simple, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Krav.Simple.0.1.1\lib\portable-net4+sl5+wp8+windows8\Krav.Simple.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

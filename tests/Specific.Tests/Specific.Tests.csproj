@@ -51,7 +51,7 @@
     <Compile Include="SpecificationExtensionTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Specific\Specific.csproj">
+    <ProjectReference Include="..\..\src\Specific\Specific.csproj">
       <Project>{801b8e1a-c124-4a69-a45b-f2dfc6931b10}</Project>
       <Name>Specific</Name>
     </ProjectReference>
