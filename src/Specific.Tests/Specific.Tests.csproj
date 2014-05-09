@@ -53,7 +53,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Specific\Specific.csproj">
       <Project>{801b8e1a-c124-4a69-a45b-f2dfc6931b10}</Project>
-      <Name>SpecificationPattern</Name>
+      <Name>Specific</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
