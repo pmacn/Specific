@@ -4,13 +4,15 @@ VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specific", "src\Specific\Specific.csproj", "{801B8E1A-C124-4A69-A45B-F2DFC6931B10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specific.Tests", "src\Specific.Tests\Specific.Tests.csproj", "{C4C93363-60E2-45D0-B956-6AC35424D2C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specific.Tests", "tests\Specific.Tests\Specific.Tests.csproj", "{C4C93363-60E2-45D0-B956-6AC35424D2C3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Git", "Git", "{57441D9A-5F92-4DB0-B008-D5CAB5035333}"
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9495AA94-848F-4AFD-96E9-7A72BA5B1E31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,5 +31,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C4C93363-60E2-45D0-B956-6AC35424D2C3} = {9495AA94-848F-4AFD-96E9-7A72BA5B1E31}
 	EndGlobalSection
 EndGlobal
