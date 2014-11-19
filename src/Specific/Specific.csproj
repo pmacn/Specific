@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AndSpecification.cs" />
-    <Compile Include="IEnumerableExtensions.cs" />
+    <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="ISpecification.cs" />
     <Compile Include="NotSpecification.cs" />
     <Compile Include="OrSpecification.cs" />
