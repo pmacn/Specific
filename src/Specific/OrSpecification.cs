@@ -2,7 +2,7 @@
 
 namespace Specific
 {
-    public class OrSpecification<T> : ISpecification<T>
+    internal class OrSpecification<T> : ISpecification<T>
     {
         readonly ISpecification<T> left;
         readonly ISpecification<T> right;

@@ -57,8 +57,9 @@ namespace Specific.Tests
             {
                 ISpecification<object> nullSpec = null;
                 ISpecification<object> notNullSpec = FakeSpecification.AlwaysTrue;
-                Should.Throw<ArgumentNullException>(() => new AndSpecification<object>(nullSpec, notNullSpec));
-                Should.Throw<ArgumentNullException>(() => new AndSpecification<object>(notNullSpec, nullSpec));
+
+                Should.Throw<ArgumentNullException>(() => nullSpec.And(notNullSpec));
+                Should.Throw<ArgumentNullException>(() => notNullSpec.And(nullSpec));
             }
         }
 
@@ -88,7 +89,7 @@ namespace Specific.Tests
             public void WhenNullSource_ThrowsException()
             {
                 ISpecification<object> nullSpec = null;
-                Should.Throw<ArgumentNullException>(() => new NotSpecification<object>(nullSpec));
+                Should.Throw<ArgumentNullException>(() => nullSpec.Not());
             }
         }
 
@@ -143,8 +144,9 @@ namespace Specific.Tests
             {
                 ISpecification<object> nullSpec = null;
                 ISpecification<object> notNullSpec = FakeSpecification.AlwaysTrue;
-                Should.Throw<ArgumentNullException>(() => new OrSpecification<object>(nullSpec, notNullSpec));
-                Should.Throw<ArgumentNullException>(() => new OrSpecification<object>(notNullSpec, nullSpec));
+                
+                Should.Throw<ArgumentNullException>(() => notNullSpec.Or(nullSpec));
+                Should.Throw<ArgumentNullException>(() => nullSpec.Or(notNullSpec));
             }
         }
 
@@ -199,8 +201,9 @@ namespace Specific.Tests
             {
                 ISpecification<object> nullSpec = null;
                 ISpecification<object> notNullSpec = FakeSpecification.AlwaysTrue;
-                Should.Throw<ArgumentNullException>(() => new XorSpecification<object>(nullSpec, notNullSpec));
-                Should.Throw<ArgumentNullException>(() => new XorSpecification<object>(notNullSpec, nullSpec));
+
+                Should.Throw<ArgumentNullException>(() => nullSpec.Xor(notNullSpec));
+                Should.Throw<ArgumentNullException>(() => notNullSpec.Xor(nullSpec));
             }
         }
     }
