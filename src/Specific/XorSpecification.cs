@@ -2,7 +2,7 @@
 
 namespace Specific
 {
-    public class XorSpecification<T> : ISpecification<T>
+    internal class XorSpecification<T> : ISpecification<T>
     {
         readonly ISpecification<T> right;
         readonly ISpecification<T> left;

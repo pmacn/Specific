@@ -34,11 +34,14 @@ namespace Specific.Tests
         }
     }
 
-    public class IsSpecialNumber : AndSpecification<int>
+    public class IsSpecialNumber : ISpecification<int>
     {
-        public IsSpecialNumber()
-            : base(new HigherThan(80), new DivisibleBy(5))
+        private readonly ISpecification<int> specification = new HigherThan(80).And(new DivisibleBy(5));
+        
+        public bool SatisfiedBy(int entity)
         {
+            return specification
+                .SatisfiedBy(entity);
         }
     }
 

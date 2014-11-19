@@ -2,7 +2,7 @@
 
 namespace Specific
 {
-    public class AndSpecification<T> : ISpecification<T>
+    internal class AndSpecification<T> : ISpecification<T>
     {
         readonly ISpecification<T> left;
         readonly ISpecification<T> right;

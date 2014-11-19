@@ -2,7 +2,7 @@
 {
     using Krav;
 
-    public class NotSpecification<T> : ISpecification<T>
+    internal class NotSpecification<T> : ISpecification<T>
     {
         private readonly ISpecification<T> specification;
 
