@@ -62,6 +62,36 @@ namespace Specific.Tests
             }
         }
 
+        public class NotExtension
+        {
+            [Fact]
+            public void TrueIsFalse()
+            {
+                var original = FakeSpecification.AlwaysTrue;
+
+                var sut = original.Not();
+
+                sut.SatisfiedBy(null).ShouldBe(false);
+            }
+
+            [Fact]
+            public void FalseIsTrue()
+            {
+                var original = FakeSpecification.AlwaysFalse;
+
+                var sut = original.Not();
+
+                sut.SatisfiedBy(null).ShouldBe(true);
+            }
+
+            [Fact]
+            public void WhenNullSource_ThrowsException()
+            {
+                ISpecification<object> nullSpec = null;
+                Should.Throw<ArgumentNullException>(() => new NotSpecification<object>(nullSpec));
+            }
+        }
+
         public class OrCombinator
         {
             [Fact]
