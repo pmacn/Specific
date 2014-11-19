@@ -45,7 +45,7 @@ namespace Specific.Tests
         }
     }
 
-    public class IEnumerableExtensionTests
+    public class EnumerableExtensionTests
     {
         [Fact]
         public void CanFilterIEnumerableUsingSpecification()
