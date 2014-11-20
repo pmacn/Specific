@@ -1,7 +1,5 @@
 ﻿namespace Specific
 {
-    using Krav;
-
     /// <summary>
     /// An <see cref="ISpecification{T}"/> that demands that at least one of a pair of specifications is satisfied.
     /// </summary>
@@ -31,9 +29,6 @@
         /// </param>
         public OrSpecification(ISpecification<T> left, ISpecification<T> right)
         {
-            RequireThat.NotNull(left, "left");
-            RequireThat.NotNull(right, "right");
-
             this.left = left;
             this.right = right;
         }

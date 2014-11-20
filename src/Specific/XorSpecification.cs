@@ -1,7 +1,5 @@
 ﻿namespace Specific
 {
-    using Krav;
-
     /// <summary>
     /// A specification that demands that one and only one of two specifications is satisfied.
     /// </summary>
@@ -31,9 +29,6 @@
         /// </param>
         public XorSpecification(ISpecification<T> left, ISpecification<T> right)
         {
-            RequireThat.NotNull(left, "left");
-            RequireThat.NotNull(right, "right");
-
             this.left = left;
             this.right = right;
         }

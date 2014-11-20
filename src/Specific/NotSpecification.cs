@@ -1,7 +1,5 @@
 ﻿namespace Specific
 {
-    using Krav;
-
     /// <summary>
     /// An <see cref="ISpecification{T}"/> that demands that the source specification is not satisfied.
     /// </summary>
@@ -23,8 +21,6 @@
         /// </param>
         public NotSpecification(ISpecification<T> source)
         {
-            RequireThat.NotNull(source, "source");
-
             this.source = source;
         }
 
