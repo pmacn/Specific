@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace Specific
+﻿namespace Specific
 {
+    using System.Collections.Generic;
+    using System.Linq;
+
     public static class EnumerableExtensions
     {
-        public static IEnumerable<T> Where<T>(this IEnumerable<T> items, ISpecification<T> specification)
+        public static IEnumerable<T> Where<T>(this IEnumerable<T> source, ISpecification<T> specification)
         {
-            return items.Where(specification.SatisfiedBy);
+            return source.Where(specification.SatisfiedBy);
         }
     }
 }

@@ -1,7 +1,6 @@
-﻿
-namespace Specific
+﻿namespace Specific
 {
-    public interface ISpecification<T>
+    public interface ISpecification<in T>
     {
         bool SatisfiedBy(T entity);
     }
