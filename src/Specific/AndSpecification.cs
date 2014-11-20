@@ -31,9 +31,6 @@
         /// </param>
         public AndSpecification(ISpecification<T> left, ISpecification<T> right)
         {
-            RequireThat.NotNull(left, "left");
-            RequireThat.NotNull(right, "right");
-
             this.left = left;
             this.right = right;
         }

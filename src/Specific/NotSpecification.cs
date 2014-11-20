@@ -23,8 +23,6 @@
         /// </param>
         public NotSpecification(ISpecification<T> source)
         {
-            RequireThat.NotNull(source, "source");
-
             this.source = source;
         }
 
