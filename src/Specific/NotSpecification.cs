@@ -14,7 +14,7 @@
 
         public bool SatisfiedBy(T entity)
         {
-            return !specification.SatisfiedBy(entity);
+            return !this.specification.SatisfiedBy(entity);
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿
-namespace Specific
+﻿namespace Specific
 {
     public static class SpecificationExtensions
     {
