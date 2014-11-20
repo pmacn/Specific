@@ -1,5 +1,7 @@
 ﻿namespace Specific
 {
+    // ReSharper disable MethodNamesNotMeaningful
+
     /// <summary>
     /// Extensions for combining specifications using logical operations.
     /// </summary>
