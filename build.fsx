@@ -1,6 +1,7 @@
-#r "tools/FAKE/tools/FakeLib.dll"
+#r "tools/FAKE.Core/tools/FakeLib.dll"
 open Fake
 open System
+open Fake.XUnit2Helper
 
 // Properties
 let buildDir = "./build/"
@@ -27,9 +28,8 @@ Target "BuildTests" (fun _ ->
 
 Target "Test" (fun _ ->
   !! (sprintf "%s/*.Tests.dll" testBuildDir)
-  |> xUnit (fun p ->
+  |> xUnit2 (fun p ->
     {p with 
-      Verbose = false
       OutputDir = testResultsDir })
 )
 

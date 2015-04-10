@@ -13,11 +13,11 @@
 *.cache
 
 # build
-build/
+/build/
 
 #tools
-tools/xunit.runners
-tools/FAKE
+tools/xunit.runner.console
+tools/FAKE.Core
 
 #test results
 tests/
